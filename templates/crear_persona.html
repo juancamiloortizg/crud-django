@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block titulo %}Formulario de contacto{% endblock titulo %}
+{% block cuerpo %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Crear persona</button>
+    </form>
+
+{% endblock cuerpo %}
