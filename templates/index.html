@@ -14,6 +14,7 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Correo</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@
                 <td>{{ persona.nombre }}</td>
                 <td>{{ persona.apellido }}</td>
                 <td>{{ persona.correo }}</td>
+                <td><a href="{% url 'editar_persona' persona.id %}">Editar</a><span>   </span><a href="{% url 'eliminar_persona' persona.id %}">Eliminar</a></td>
             </tr>
             {% endfor %}
         </tbody>
